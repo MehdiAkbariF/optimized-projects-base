@@ -1,0 +1,19 @@
+/* packages/ui/src/globals.css */
+
+@import "tailwindcss";
+
+@layer base {
+:root {
+--background: theme('colors.slate.50');
+--foreground: theme('colors.slate.900');
+--card: theme('colors.white');
+--card-foreground: theme('colors.slate.900');
+
+--border: theme('colors.slate.200');
+}
+body {
+@apply bg-background text-foreground;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+}
