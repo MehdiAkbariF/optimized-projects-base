@@ -5,6 +5,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "storybook": "turbo run storybook", 
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
@@ -19,6 +20,7 @@
   },
   "pnpm": {
     "overrides": {
+      "react-dom": "18.3.1",
       "@typescript-eslint/parser": "^7.2.0",
       "eslint-plugin-react-hooks": "5.0.0-canary-7118f5dd7-20230705"
     }
