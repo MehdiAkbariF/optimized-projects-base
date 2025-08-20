@@ -1,19 +1,35 @@
 /* packages/ui/src/globals.css */
 
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
-:root {
---background: theme('colors.slate.50');
---foreground: theme('colors.slate.900');
---card: theme('colors.white');
---card-foreground: theme('colors.slate.900');
+  :root {
+    --background: 248 250 252; /* slate-50 */
+    --foreground: 15 23 42; /* slate-900 */
+    
+    /* تعریف پالت رنگی Primary (Blue) */
+    --color-primary-50: 239 246 255;
+    --color-primary-100: 219 234 254;
+    --color-primary-200: 191 219 254;
+    --color-primary-300: 147 197 253;
+    --color-primary-400: 96 165 250;
+    --color-primary-500: 59 130 246;
+    --color-primary-600: 37 99 235;
+    --color-primary-700: 29 78 216;
+    --color-primary-800: 30 64 175;
+    --color-primary-900: 30 58 138;
+    --color-primary-950: 23 37 84;
 
---border: theme('colors.slate.200');
-}
-body {
-@apply bg-background text-foreground;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
+    /* تعریف پالت رنگی Danger (Red) */
+    --color-danger-600: 220 38 38;
+    --color-danger-700: 185 28 28;
+  }
+
+  body {
+    @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
